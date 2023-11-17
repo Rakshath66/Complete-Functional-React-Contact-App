@@ -1,0 +1,67 @@
+flow
+
+1.react environment
+2.react component - function and class
+3.react jsx
+4.rendering list (class component)
+
+5.props-pass data from parent to child
+6.access props
+
+7.reference variable in jsx {}
+8.add inline style -> red, add image
+
+9.useState react hook, pass the value to contactlist
+
+10.pass function as prop - handler, to get value of input
+11.on change, onsubmit, sending handler back
+
+12.update state using setState()
+13.useEffect React hook->render component again, to set and get contacts from localstorage -> to prevent the data loss on refresh
+
+14.Delete Contact- requires uuid, npm i uuidv4
+15.sending handler to child(contactcard), then to subchild(contactcard) to get id -> using this id contact is deleted, and remaining contacts are showed
+
+16.we want different components in different routes, 
+    if i click add contact it shd go to another router for another task, 
+    we can use react router->helps in navigating btwn diff components by changing browser url, 
+    modifies browser history, 
+    maintain our page ui state without refreshing browser
+we need react-router-dom install it, npm install react-router-dom --save
+17.create route apllication
+18.switch and exact
+19.passing props in route component/render
+20. when name email is entered, after clicking add, it shd save in local storage and redirected back to contactlist -using program navigation with history
+
+21.onclicking name and email navigate to contact details
+
+22.setting up json server, json follows restful api convention, go to main git hub page of json -> steps, 
+npm init --yes in server-api to create package.json file -> stores default info
+npm i --save json-server -> install json server
+
+http methods and end points 
+GET /contacts
+POST /contacts
+PUT /contacts/:id
+DELETE /contacts/:id
+
+23.create db.json, change scripts in json file, with port number 3006 in write mode from db.json
+
+start both server, json server at 3006s
+24.fetch data from db, not from local storage -> install axios package to start
+25.set main file of api with json server url
+
+26.Read Contact :- api fetches data from json server, and provide to user. json server hosted by db. -> in useEffect
+
+27.create contact :- create user request and post into json server and set state for new user with other users
+
+28.delete contact := request to delete data from json, we donnot get anything, only we get status code -> see in network tab
+
+29.Edit functionality :-edit contact same like add contact, create route for edit
+
+30.Update contact :- get response for id from json server, change the state
+
+31.Search :- create 2 states of result and overall result, add state to element, pass handler of search to contactlist, when search bar gets a value 
+assign it to handler using useref hook. filter all the contacts the matches to the search term in input box display only that
+
+32.testing output
